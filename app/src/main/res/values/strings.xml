@@ -8,4 +8,7 @@
     <string name="Pod">Pod</string>
     <string name="menus">menu</string>
     <string name="scheduleButton">Schedule</string>
+    <string name="pod_status">Pod Status</string>
+    <string name="notification">Notification</string>
+    <string name="Advice">Advice</string>
 </resources>

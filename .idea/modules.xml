@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AstroGro.iml" filepath="$PROJECT_DIR$/AstroGro.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BtleTEST/btleTest/btle.iml" filepath="$PROJECT_DIR$/BtleTEST/btleTest/btle.iml" />
     </modules>
   </component>
 </project>

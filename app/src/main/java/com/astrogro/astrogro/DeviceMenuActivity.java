@@ -1,16 +1,14 @@
 package com.astrogro.astrogro;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.Toast;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * Created by swinston1 on 4/11/15.
@@ -25,22 +23,24 @@ public class DeviceMenuActivity extends Activity {
         podListView = (GridView) findViewById(R.id.gridView);
         if(podListView == null)
             return;
-        final String[] podsList = { "Pod1", "Pod2", "Pod3",
+        final String[] podsList = { "Pod", "Pod2", "Pod3",
                              "Pod4", "Pod5", "Pod5",
                              "Pod6", "Pod7", "Pod8" };
-        final String[] cropList = { "tomatoes", "empty", "basil",
+        String[] cropList = { "tomatoes", "lettuce", "basil",
                                     "cauliflower", "wheat", "strawberries",
                                     "empty", "empty", "empty"};
-        podListView.setAdapter(new PodCustomAdapter(this, podsList, cropList));
+        int[] PodStatus = { 0, 0, 0,
+                            0, 1, 0,
+                            0, 0, 1};
+
+        podListView.setAdapter(new PodCustomAdapter(this, podsList, cropList, PodStatus));
         podListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                     long arg3) {
 
-
-                Toast.makeText(getBaseContext(), podsList[arg2],
-                        Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), PodInfo.class));
             }
         });
     }

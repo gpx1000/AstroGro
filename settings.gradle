@@ -1,1 +1,2 @@
-include ':app'
+include ':app', ':btle'
+project(':btle').projectDir = new File('BtleTEST/btleTest')
